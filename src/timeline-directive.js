@@ -12,6 +12,10 @@ angular.module('angular-timeline').directive('timeline', function() {
   return {
     restrict: 'AE',
     transclude: true,
-    template: '<ul class="timeline" ng-transclude></ul>'
+    scope: {
+      side: '@'
+    },
+    controller: function() {},
+    template: '<ul class="timeline"><li class="timeline-beginning"></li><div ng-transclude></div></ul>'
   };
 });

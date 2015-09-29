@@ -41,14 +41,12 @@ var ExampleCtrl = function($rootScope, $document, $timeout, $scope) {
 	};
 	// optional: not mandatory (uses angular-scroll-animate)
 	$scope.animateElementIn = function($el) {
-		$el.removeClass('hidden');
-		$el.addClass('bounce-in');
+		$el.removeClass('hide');
 	};
 
 	// optional: not mandatory (uses angular-scroll-animate)
 	$scope.animateElementOut = function($el) {
-		$el.addClass('hidden');
-		$el.removeClass('bounce-in');
+		$el.addClass('hide');
 	};
 };
 

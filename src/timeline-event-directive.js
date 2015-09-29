@@ -11,11 +11,12 @@
  *
  * You typically embed a `timeline-badge` and `timeline-panel` element within a `timeline-event`.
  */
-angular.module('angular-timeline').directive('timelineEvent', function() {
+angular.module('angular-timeline').directive('timelineEvent', function($window) {
+
   return {
     require: '^timeline',
     restrict: 'AE',
     transclude: true,
-    template: '<li ng-class-even="\'timeline-inverted\'" ng-transclude></li>'
+    template: '<li ng-transclude></li>'
   };
 });

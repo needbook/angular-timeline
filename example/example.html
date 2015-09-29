@@ -7,15 +7,15 @@
   <timeline>
     <timeline-event ng-repeat="event in events">
 
-      <!-- uses angular-scroll-animate to give it some pop -->
-      <timeline-badge class="{{event.badgeClass}} hidden"
-                      when-visible="animateElementIn" when-not-visible="animateElementOut">
+      <timeline-legend>
+        Location 12
+      </timeline-legend>
+
+      <timeline-badge class="{{event.badgeClass}}">
 	      <i class="glyphicon {{event.badgeIconClass}}"></i>
       </timeline-badge>
 
-		  <!-- uses angular-scroll-animate to give it some pop -->
-      <timeline-panel class="{{event.badgeClass}} hidden"
-                      when-visible="animateElementIn" when-not-visible="animateElementOut">
+      <timeline-panel class="{{event.badgeClass}}">
         <timeline-heading>
           <h4>{{event.title}}</h4>
           <p ng-if="event.when">

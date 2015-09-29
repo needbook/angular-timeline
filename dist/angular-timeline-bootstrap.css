@@ -3,9 +3,9 @@ ul.timeline .timeline-badge .glyphicon {
 
 @media only screen and (min-width: 768px) {
   ul.timeline li .timeline-panel {
-    width: calc(50% - 45px);
-    width: -moz-calc(50% - 45px);
-    width: -webkit-calc(50% - 45px); }
+    width: calc(80% - 45px);
+    width: -moz-calc(80% - 45px);
+    width: -webkit-calc(80% - 45px); }
  }
 
 @media only screen and (max-width: 767px) {

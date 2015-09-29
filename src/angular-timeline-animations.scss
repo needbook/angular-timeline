@@ -1,7 +1,7 @@
 // only used in the example, not required for using angular-timeline
 .hidden {
-  display: block !important;
-  opacity: 0;
+  opacity:0;
+  display:block !important;
 }
 
 @media only screen and (min-width: 768px) {
@@ -199,5 +199,3 @@
     transform: scale(1);
   }
 }
-
-
