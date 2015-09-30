@@ -175,10 +175,16 @@ timeline-badge, .timeline-beginning {
     width: -webkit-calc(100% - 85px);
   }
 
-  ul.timeline li timeline-badge, ul.timeline li.timeline-beginning {
-    left: 15px;
+  ul.timeline li timeline-badge {
+    left: 25px;
     margin-left: 0;
     top: $top + 1;
+  }
+
+  ul.timeline li.timeline-beginning {
+    left: 30px;
+    margin-left: 0;
+    top: 0;
   }
 
   ul.timeline li timeline-panel {

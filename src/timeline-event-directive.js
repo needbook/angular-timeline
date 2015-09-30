@@ -32,7 +32,8 @@ angular.module('angular-timeline').directive('timelineEvent', function($window) 
     else {
       element.removeClass('hidden');
     }
-    element.children().css('top', (-60.0 * prog).toString() + 'px');
+    element.children().css('top', (-100.0 * prog).toString() + 'px');
+    element.children().css('opacity', 1.0 - prog);
   };
 
   return {
@@ -48,8 +49,8 @@ angular.module('angular-timeline').directive('timelineEvent', function($window) 
         if (imagePos - $window.pageYOffset < 0) {
           progress = 1.0;
         }
-        else if (imagePos - $window.pageYOffset < 60) {
-          progress = 1.0 - ((imagePos - $window.pageYOffset) / 60);
+        else if (imagePos - $window.pageYOffset < 100) {
+          progress = 1.0 - ((imagePos - $window.pageYOffset) / 100);
         }
         element.animationProgress = progress;
         anim(element, progress);
