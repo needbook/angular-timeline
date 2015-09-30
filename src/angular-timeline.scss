@@ -109,22 +109,12 @@ timeline-badge, .timeline-beginning {
     position: relative;
   }
 
-  &.timeline-legend timeline-panel {
-    float: right;
-  }
-
-  &.timeline-legend timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto;
-  }
-
-  &.timeline-legend timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto;
+  timeline-legend {
+    float: left;
+    padding-top: 22px;
+    padding-right: 40px;
+    text-align: right;
+    width: 20%;
   }
 }
 

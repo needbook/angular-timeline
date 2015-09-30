@@ -73,18 +73,12 @@ timeline-badge, .timeline-beginning {
     float: right;
     padding: 12px;
     position: relative; }
-  .timeline li.timeline-legend timeline-panel {
-    float: right; }
-  .timeline li.timeline-legend timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto; }
-  .timeline li.timeline-legend timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto; }
+  .timeline li timeline-legend {
+    float: left;
+    padding-top: 22px;
+    padding-right: 40px;
+    text-align: right;
+    width: 20%; }
 
 .timeline-heading .glyphicon {
   margin-right: 4px;
