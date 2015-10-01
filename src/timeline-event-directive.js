@@ -11,7 +11,6 @@
  *
  * You typically embed a `timeline-badge` and `timeline-panel` element within a `timeline-event`.
  */
-var id = 0;
 angular.module('angular-timeline').directive('timelineEvent', function($window) {
 
   function getElementOffset(element) {
@@ -42,15 +41,16 @@ angular.module('angular-timeline').directive('timelineEvent', function($window) 
     transclude: true,
     template: '<li ng-transclude></li>',
     link: function(scope, element, attrs) {
-      var i = id++;
+      var containerYOffset = getElementOffset(element.parent().parent()[0]).top;
       angular.element($window).bind('scroll', function() {
+        var offset = $window.pageYOffset - containerYOffset;
         var imagePos = getElementOffset(element[0]).top;
         var progress = 0.0;
-        if (imagePos - $window.pageYOffset < 0) {
+        if (imagePos - offset < 0) {
           progress = 1.0;
         }
-        else if (imagePos - $window.pageYOffset < 100) {
-          progress = 1.0 - ((imagePos - $window.pageYOffset) / 100);
+        else if (imagePos - offset < 180) {
+          progress = 1.0 - ((imagePos - offset) / 180);
         }
         element.animationProgress = progress;
         anim(element, progress);
