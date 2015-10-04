@@ -111,10 +111,14 @@ timeline-badge, .timeline-beginning {
 
   timeline-legend {
     float: left;
-    padding-top: 22px;
-    padding-right: 40px;
     text-align: right;
     width: 20%;
+
+    span {
+      padding-right: 40px;
+      line-height: 65px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -195,6 +199,10 @@ timeline-badge, .timeline-beginning {
     left: -14px;
     right: auto;
     top: $top + 12px;
+  }
+
+  ul.timeline li timeline-legend {
+    visibility: hidden;
   }
 }
 
